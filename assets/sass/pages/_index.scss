@@ -10,8 +10,7 @@
       letter-spacing: -0.52px;
       color: $font-bold;
       width: 900px;
-      height: 120px;
-      margin: 48px auto 0px;
+      margin-top: 48px;
     }
 
     .content {
@@ -25,8 +24,6 @@
       line-height: 26px;
       letter-spacing: -0.1px;
       width: 900px;
-      height: 52px;
-
       margin: 0px auto;
     }
 
@@ -46,8 +43,33 @@
         box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
         padding: 12px 18px;
         @include buttons(118px, 46px, $font-bold, #fff);
+      }
+    }
+  }
 
-        
+  @media (max-width: $phone-size) {
+    .container {
+      padding: 0px 16px !important;
+    }
+    .title-content-btns {
+      p {
+        width: 100% !important;
+        font-size: 32px !important;
+        font-weight: 400 !important;
+        line-height: 36px !important;
+        letter-spacing: -0.1px !important;
+      }
+
+      .content {
+        width: 100% !important;
+        font-size: 18px !important;
+      }
+
+      .btnss {
+        flex-direction: column;
+        button {
+          width: 100% !important;
+        }
       }
     }
   }
