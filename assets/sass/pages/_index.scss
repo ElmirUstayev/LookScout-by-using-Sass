@@ -1,7 +1,6 @@
 .section__title {
   .title-content-btns {
     p {
-      text-align: center;
       font-family: Inter;
       font-size: 52px;
       font-style: normal;
@@ -10,7 +9,8 @@
       letter-spacing: -0.52px;
       color: $font-bold;
       width: 900px;
-      margin-top: 48px;
+      text-align: center;
+      margin: 48px auto 0px;
     }
 
     .content {
@@ -74,3 +74,214 @@
     }
   }
 }
+
+.section_advertisement {
+  margin: 64px 0px 0px;
+  background-color: #fafbfc;
+  padding: 64px 0px;
+  .advert-title {
+    text-align: center;
+
+    h1 {
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: -0.64px;
+      color: $font-bold;
+    }
+
+    p {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.1px;
+      color: $color-grey;
+      width: 800px;
+      margin: 0 auto;
+      padding-top: 16px;
+    }
+  }
+
+  .advert__content__picture {
+    padding: 64px 32px 0px;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    column-gap: 40px;
+
+    .left-side{
+      display: flex;
+      align-items:center;
+      .advert__content {
+        width: 516px;
+      .first-part {
+        color: $btn_bgcolor;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: -0.1px;
+      }
+      .second-part {
+        color: $font-bold;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 42px;
+        letter-spacing: -0.32px;
+      }
+      .btn-part {
+        padding-top: 40px;
+        button {
+          @include buttons(133px,46px,#FFF,$btn-bgcolor);
+          border-radius: 6px;
+          box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+          display: flex;
+          justify-content:center;
+          align-items:center;
+         
+        }
+       
+      }
+      p {
+        color: $color-grey;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.1px;
+        padding-top: 10px;
+      }
+    }
+    }
+
+    .right-side{
+      background-image:url(/assets/svg/image.svg);
+      width: 560px;
+      height: 560px;
+    }
+
+    .responsive-side{
+      background-image:url(/assets/svg/zindex.svg);
+      width: 560px;
+      height: 560px;
+      display: none;
+    }
+  
+  }
+
+  @media (max-width:$phone-size) {
+    .advert-title{
+      h1{
+        width: 100%;
+      }
+      p{
+        width: 100% !important;
+      }
+    }
+
+    .advert__content__picture{
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      .left-side{
+        width: 100%;
+      }
+      .right-side{
+        display: none;
+    
+      }
+      .responsive-side{
+        width: 100% !important;
+        display: initial;
+
+      }
+    }
+  }
+}
+
+
+#section_blue-line{
+  .blue-line{
+    padding:64px 0px;
+    background-color: $color-content-blue;
+
+    .blue-inside{
+      display: flex;
+      justify-content:space-between;
+      gap: 80px;
+      .blue-picture{
+        width:100%;
+        height: 560px;
+        background-image: url(/assets/svg/zindex.svg);
+        background-repeat: no-repeat;
+      }
+
+      .blue-content{
+        display: flex;
+        align-items:center;
+        .blue-parts{
+          width: 516px;
+
+          .blue-first-part{
+            color: #FFF;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: -0.1px;
+          }
+
+          .blue-second-part{
+            color: #FFF;
+            font-family: Inter;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 42px;
+            letter-spacing: -0.32px;
+          }
+
+          p {
+            color: #B1CCFB;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: -0.1px;
+            padding-top: 10px;
+          }
+
+          .blue-btn-part{
+            padding-top: 40px;
+            button {
+              @include buttons(133px,46px,#FFF,$btn-bgcolor);
+              border-radius: 6px;
+              box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.04);
+              display: flex;
+              justify-content:center;
+              align-items:center;
+             
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width:$phone-size) {
+      .blue-inside{
+        flex-direction: column;
+      }
+    }
+  }
+}
+
