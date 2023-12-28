@@ -54,4 +54,9 @@ button{
 }
 button{
 	cursor: pointer;
+	transition: 0.6s transform;
+	&:hover{
+		transform: scale(1.1);
+		
+	}
 }
